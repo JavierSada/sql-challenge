@@ -1,67 +1,67 @@
---Data Modeling Table creation
-
-CREATE TABLE "departments" (
-    "dept_no" VARCHAR   NOT NULL,
-    "dept_name" VARCHAR   NOT NULL,
-    CONSTRAINT "pk_departments" PRIMARY KEY (
-        "dept_no"
-     )
+-- Create table departments
+CREATE TABLE departments (
+  dept_no VARCHAR(10),
+  dept_name VARCHAR(30) NOT NULL,
+  PRIMARY KEY (dept_no)
 );
 
-CREATE TABLE "dept_emp" (
-    "emp_no" INT   NOT NULL,
-    "dept_no" VARCHAR   NOT NULL,
-    "from_date" DATE   NOT NULL,
-    "to_date" DATE   NOT NULL
+select * from departments
+
+-- Create table employees
+
+CREATE TABLE employees (
+	emp_no INT NOT NULL,
+    emp_title_id VARCHAR(30) NOT NULL,
+	birth_date DATE NOT NULL,
+	first_name VARCHAR(20) NOT NULL,
+	last_name VARCHAR(20) NOT NULL,
+	gender VARCHAR(2) NOT NULL,
+	hire_date DATE NOT NULL,
+	PRIMARY KEY (emp_no)
 );
 
-REATE TABLE "dept_manager" (
-    "dept_no" VARCHAR   NOT NULL,
-    "emp_no" INT   NOT NULL,
-    "from_date" DATE   NOT NULL,
-    "to_date" DATE   NOT NULL
+select * from employees
+
+--Create table dept_emp
+
+CREATE TABLE dept_emp (
+	emp_no INT NOT NULL,
+	dept_no VARCHAR(10) NOT NULL,
+	from_date DATE NOT NULL,
+	to_date DATE NOT NULL,
+    FOREIGN KEY (emp_no) REFERENCES employees(emp_no),
+    FOREIGN KEY (dept_no) REFERENCES departments(dept_no)
 );
 
-CREATE TABLE "employees" (
-    "emp_no" INT   NOT NULL,
-    "birth_date" DATE   NOT NULL,
-    "first_name" VARCHAR   NOT NULL,
-    "last_name" VARCHAR   NOT NULL,
-    "gender" VARCHAR   NOT NULL,
-    "hire_date" DATE   NOT NULL,
-    CONSTRAINT "pk_employees" PRIMARY KEY (
-        "emp_no"
-     )
+select * from dept_emp
+
+-- Create table dept_managers
+
+CREATE TABLE dept_managers (
+ dept_no VARCHAR (30),
+ emp_no INT,
+ FOREIGN KEY (dept_no) REFERENCES departments(dept_no),
+ FOREIGN KEY (emp_no) REFERENCES employees(emp_no)
 );
 
-CREATE TABLE "salaries" (
-    "emp_no" INT   NOT NULL,
-    "salary" INT   NOT NULL,
-    "from_date" DATE   NOT NULL,
-    "to_date" DATE   NOT NULL
+select * from dept_managers
+
+--Creating salaries table
+
+CREATE TABLE salaries (
+	emp_no BIGINT NOT NULL,
+	salary BIGINT NOT NULL,
+	FOREIGN KEY(emp_no) REFERENCES employees(emp_no)
 );
 
-CREATE TABLE "titles" (
-    "emp_no" INT   NOT NULL,
-    "title" VARCHAR   NOT NULL,
-    "from_date" DATE   NOT NULL,
-    "to_date" DATE   NOT NULL
+select * from salaries
+
+--Creating titles table
+
+CREATE TABLE titles (
+	title_id VARCHAR(30) NOT NULL,
+	title VARCHAR(30) NOT NULL,
+    PRIMARY KEY (title_id)	
 );
 
-ALTER TABLE "dept_emp" ADD CONSTRAINT "fk_dept_emp_emp_no" FOREIGN KEY("emp_no")
-REFERENCES "employees" ("emp_no");
-
-ALTER TABLE "dept_emp" ADD CONSTRAINT "fk_dept_emp_dept_no" FOREIGN KEY("dept_no")
-REFERENCES "departments" ("dept_no");
-
-ALTER TABLE "dept_manager" ADD CONSTRAINT "fk_dept_manager_dept_no" FOREIGN KEY("dept_no")
-REFERENCES "departments" ("dept_no");
-
-ALTER TABLE "dept_manager" ADD CONSTRAINT "fk_dept_manager_emp_no" FOREIGN KEY("emp_no")
-REFERENCES "employees" ("emp_no");
-
-ALTER TABLE "salaries" ADD CONSTRAINT "fk_salaries_emp_no" FOREIGN KEY("emp_no")
-REFERENCES "employees" ("emp_no");
-
-ALTER TABLE "titles" ADD CONSTRAINT "fk_titles_emp_no" FOREIGN KEY("emp_no")
-REFERENCES "employees" ("emp_no");
+select * from titles
