@@ -1,6 +1,8 @@
 # SQL Homework - Employee Database: A Mystery in Two Parts :computer:
 
-![sql.png](sql.png)
+<p align='center'>
+<a><img height="400" src="https://github.com/JavierSada/sql-challenge/blob/main/Images/postgresql-icon-12.jpg"></a>
+</p>
 
 ## Background
 
