@@ -22,7 +22,7 @@ Inspect the CSVs and sketch out an ERD of the tables; [Tables relations docs](ht
 <a><img height="600" src="https://github.com/JavierSada/sql-challenge/blob/main/Images/QuickDBD.PNG"></a>
 </p>
 
-#### Data Engineering
+#### Data Engineering & Data Analysis
 
 * Use the information you have to create a table schema for each of the six CSV files. Remember to specify data types, primary keys, foreign keys, and other constraints.
 
@@ -34,8 +34,10 @@ Inspect the CSVs and sketch out an ERD of the tables; [Tables relations docs](ht
 1. Here you can find the SQL documentation to [Table Schemas](https://github.com/JavierSada/sql-challenge/blob/main/Coding/QuickDBD-Tables%20Relations.sql)
 2. After Schemas here you can find [SQL Query Docs](https://github.com/JavierSada/sql-challenge/blob/main/Coding/Queries%20QuickDBD.sql)
 
-#### Data Analysis
+## Bonus (Optional)
 
-Once you have a complete database, do the following:
+As you examine the data, you are overcome with a creeping suspicion that the dataset is fake. You surmise that your boss handed you spurious data in order to test the data engineering skills of a new employee. To confirm your hunch, you decide to take the following steps to generate a visualization of the data, with which you will confront your boss:
+
+1. Import the SQL database into Pandas. 
 
 
