@@ -38,6 +38,20 @@ Inspect the CSVs and sketch out an ERD of the tables; [Tables relations docs](ht
 
 As you examine the data, you are overcome with a creeping suspicion that the dataset is fake. You surmise that your boss handed you spurious data in order to test the data engineering skills of a new employee. To confirm your hunch, you decide to take the following steps to generate a visualization of the data, with which you will confront your boss:
 
-1. Import the SQL database into Pandas. 
+1. Import the SQL database into Pandas. Here's the [SQLAlchemy](https://github.com/JavierSada/sql-challenge/blob/main/Coding/Bonus%20SQL%20Challenge.ipynb) 
 
+2. Create a histogram to visualize the most common salary ranges for employees.
 
+<p align='left'>
+<a><img height="400" src="https://github.com/JavierSada/sql-challenge/blob/main/Images/Common%20Salary%20Ranges.png"></a>
+</p>
+
+3. Create a bar chart of average salary by title.
+
+<p align='left'>
+<a><img height="400" src="https://github.com/JavierSada/sql-challenge/blob/main/Images/Salary%20by%20Title.png"></a>
+</p>
+
+## Epilogue
+
+Evidence in hand, you march into your boss's office and present the visualization. With a sly grin, your boss thanks you for your work. On your way out of the office, you hear the words, "Search your ID number." You look down at your badge to see that your employee ID number is 499942.
