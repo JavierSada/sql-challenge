@@ -16,7 +16,7 @@ In this assignment, you will design the tables to hold data in the CSVs, import 
 
 #### Data Modeling
 
-Inspect the CSVs and sketch out an ERD of the tables; [Table relations documentaion](https://github.com/JavierSada/sql-challenge/blob/main/Coding/QuickDBD-Tables%20Relations.pdf)
+Inspect the CSVs and sketch out an ERD of the tables; [Tables relations docs](https://github.com/JavierSada/sql-challenge/blob/main/Coding/QuickDBD-Tables%20Relations.pdf)
 
 <p align='center'>
 <a><img height="600" src="https://github.com/JavierSada/sql-challenge/blob/main/Images/QuickDBD.PNG"></a>
@@ -29,5 +29,13 @@ Inspect the CSVs and sketch out an ERD of the tables; [Table relations documenta
   * For the primary keys check to see if the column is unique, otherwise create a [composite key](https://en.wikipedia.org/wiki/Compound_key). Which takes to primary keys in order to uniquely identify a row.
   * Be sure to create tables in the correct order to handle foreign keys.
 
-* Import each CSV file into the corresponding SQL table. **Note** be sure to import the data in the same order that the tables were created and account for the headers when importing to avoid errors.
+* Import each CSV file into the corresponding SQL table. 
+
+1. Here you can find the SQL documentation to [Table Schemas](https://github.com/JavierSada/sql-challenge/blob/main/Coding/QuickDBD-Tables%20Relations.sql)
+2. After Schemas here you can find [SQL Query Docs](https://github.com/JavierSada/sql-challenge/blob/main/Coding/Queries%20QuickDBD.sql)
+
+#### Data Analysis
+
+Once you have a complete database, do the following:
+
 
