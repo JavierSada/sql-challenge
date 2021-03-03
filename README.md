@@ -16,7 +16,7 @@ In this assignment, you will design the tables to hold data in the CSVs, import 
 
 #### Data Modeling
 
-Inspect the CSVs and sketch out an ERD of the tables; 
+Inspect the CSVs and sketch out an ERD of the tables; [Table relations documentaion](https://github.com/JavierSada/sql-challenge/blob/main/Coding/QuickDBD-Tables%20Relations.pdf)
 
 <p align='center'>
 <a><img height="600" src="https://github.com/JavierSada/sql-challenge/blob/main/Images/QuickDBD.PNG"></a>
